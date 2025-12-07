@@ -1,0 +1,67 @@
+# --------------------------
+# PYTHON / DJANGO IGNORE
+# --------------------------
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Byte-compiled files
+*.pkl
+*.pickle
+
+# Django stuff
+*.log
+db.sqlite3
+media/
+staticfiles/
+static_root/
+static/
+
+# Models (big files)
+*.h5
+*.hdf5
+*.ckpt
+
+# Large assets
+*.mp3
+*.mp4
+*.wav
+*.ogg
+
+# --------------------------
+# DATASETS
+# --------------------------
+skin dataset/
+datasets/
+dataset/
+data/
+images/
+*.zip
+*.rar
+*.tar
+*.gz
+
+# --------------------------
+# JUPYTER
+# --------------------------
+.ipynb_checkpoints/
+
+# --------------------------
+# OS Files
+# --------------------------
+.DS_Store
+Thumbs.db
+
+# --------------------------
+# IDE Folders
+# --------------------------
+.vscode/
+.idea/
