@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Page Background */
+    body {
+      background-image: url("https://media.licdn.com/dms/image/D4E12AQH6TCRT3oVbDQ/article-cover_image-shrink_720_1280/0/1660801744090?e=2147483647&v=beta&t=mT31u_j057KUMDRCfVHHiNXWYoL-vykeEbMDiY_6ufs");
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Container Styling */
+    .about-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: 100px auto;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Page Header */
+    h1 {
+      font-size: 5rem;
+      color: #4836a3;
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+    }
+
+    /* Section Paragraphs */
+    p.lead {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Call-to-Action Button */
+    .btn-primary {
+      background-color: #343a40;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+    }
+
+    .btn-primary:hover {
+      background-color: #495057;
+    }
+
+    /* Footer Styles */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgb(23, 23, 80);
+      color: white;
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  {% include "medical/navbar.html" %}
+<br><br>
+  <!-- About Us Content -->
+  <div class="about-container">
+    <h1>About Us</h1>
+    <br>
+
+    <p class="lead">Welcome to the Skin Cancer Detection System and Skin Cancer Chatbot!</p>
+
+    <p>Our mission is to leverage advanced Artificial Intelligence and Machine Learning technologies to provide reliable, real-time detection of various skin diseases and conditions. Our platform offers a powerful skin disease detection tool that allows users to upload an image of their skin and receive an accurate analysis within seconds. With the increasing prevalence of skin conditions, timely detection and analysis are more important than ever.</p>
+
+    <p>The system is powered by state-of-the-art machine learning algorithms, trained on vast datasets of skin images, ensuring that the results provided are both accurate and insightful. We aim to help both medical professionals and individuals in identifying potential skin issues, whether they are seeking a second opinion or need quick advice.</p>
+
+    <h4>Our Skin Cancer Chatbot</h4>
+    <p>Our <b>Skin Cancer Chatbot</b> serves as a virtual assistant, ready to interact with users and provide information, guidance, and support. This AI-based chatbot is designed to help users with their skin health queries, guiding them through common questions and directing them toward the right resources when needed. Whether you’re curious about a particular symptom or need help understanding your condition, the chatbot is here to assist.</p>
+
+    <h4>Why Choose Us?</h4>
+    <ul>
+      <li>Advanced and reliable skin Cancer detection.</li>
+      <li>Instant image-based analysis.</li>
+      <li>AI-powered chatbot assistance for skin-related questions.</li>
+      <li>Focused on privacy and data security for all users.</li>
+    </ul>
+
+    <br>
+    <p>Our platform is easy to use and accessible from anywhere, providing a comprehensive solution to skin health monitoring.</p>
+
+    <hr class="my-4">
+
+    <!-- CTA Button -->
+    <div class="text-center">
+      <a class="btn btn-primary btn-lg" href="/" role="button">Back to Homepage</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Skin Cancer Detection. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

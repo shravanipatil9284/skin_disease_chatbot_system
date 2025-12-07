@@ -1,0 +1,148 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day"],
+      "responses": ["Hello, thanks for reaching out! How can I assist you today?", "Good to see you! What can I help you with?", "Hi there, how can I assist you?"],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+      "responses": ["See you! If you need any further assistance, feel free to ask.", "Have a great day! If you have any more questions, don't hesitate to ask.", "Bye! Come back again soon if you need help."],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+      "responses": ["You're welcome! If you need anything else, feel free to ask.", "Glad I could assist! Let me know if there's anything else I can do for you.", "My pleasure! Don't hesitate to reach out if you have more questions."],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": ["Sorry, I couldn't understand that. Could you please provide more information?", "Please provide more details. I'm here to assist you.", "I'm not sure I understand. Could you please clarify?"],
+      "context": [""]
+    },
+    {
+      "tag": "Mobile Number",
+      "patterns": ["How to change/update the mobile number?"],
+      "responses": ["To change or update your mobile number, please visit your nearest branch and submit a request form for updating contact details. You will need to provide identification for security purposes."],
+      "context": [""]
+    },
+    {
+      "tag": "Cheque book",
+      "patterns": ["How to place a request for a new cheque book?"],
+      "responses": ["You can request a new cheque book through various channels such as branch visit, ATM, IVR, Netbanking, or Mobile Banking. To request through a branch visit, fill out a cheque book request form available at the branch and submit it to the staff."],
+      "context": [""]
+    },
+    {
+      "tag": "ATM_DEBIT Card",
+      "patterns": ["Who can apply for ATM-cum-Debit Card?"],
+      "responses": ["Individuals holding Savings Bank or Current Account, whether single or joint, can apply for an ATM-cum-Debit Card. This includes account types such as Either or Survivor, Former or Survivor, Later or Survivor, Anyone or Survivor, and Pensioners. Additionally, NRE account holders are also eligible."],
+      "context": [""]
+    },
+    {
+      "tag": "Money",
+      "patterns": ["After how many days will I get my money back?"],
+      "responses": ["According to RBI guidelines, your account should be credited within 7 working days from the date of the complaint. However, the resolution time may vary depending on the nature of the complaint and investigation required."],
+      "context": [""]
+    },
+    {
+      "tag": "Transaction",
+      "patterns": ["What are the transaction limits for International Cards?"],
+      "responses": ["For International Cards, the transaction limits are set to USD 1000 each per day per account for cash withdrawal from ATM and purchases up to USD 1000 at POS terminals. These limits are subject to change based on regulatory requirements and account status."],
+      "context": [""]
+    },
+    {
+      "tag": "Account",
+      "patterns": ["How do I transfer my current account to the nearest branch?"],
+      "responses": ["To transfer your current account to the nearest branch, visit the nearest bank branch with a request letter signed as per the Mode of Operation (MOP) on your entity's letterhead. Additionally, provide a Board Resolution or Authorization Letter where appropriate. The branch staff will guide you through the process and assist with necessary documentation."],
+      "context": [""]
+    },
+    {
+      "tag": "Account Types",
+      "patterns": ["What are the types of accounts in a bank?"],
+      "responses": ["There are various types of accounts offered by banks including Checking Account, Savings Account, Certificate of Deposit Account (CD), Money Market Account, and more. Each type serves different purposes and offers distinct features and benefits."],
+      "context": [""]
+    },
+    {
+      "tag": "Interest Rates",
+      "patterns": ["What are the current interest rates for savings accounts?"],
+      "responses": ["The interest rates for savings accounts vary and are subject to change based on economic conditions and bank policies. It's recommended to check with your bank or visit their website for the most up-to-date information on savings account interest rates."],
+      "context": [""]
+    },
+    {
+      "tag": "Loan Application",
+      "patterns": ["How can I apply for a personal loan?"],
+      "responses": ["To apply for a personal loan, you can visit your nearest branch and speak with a loan officer who will guide you through the application process. Alternatively, many banks offer online loan application forms on their website, allowing you to apply from the comfort of your home. Make sure to provide all necessary documents and information accurately to expedite the process."],
+      "context": [""]
+    },
+    {
+      "tag": "Credit Card Application",
+      "patterns": ["How can I apply for a credit card?"],
+      "responses": ["To apply for a credit card, you can visit your bank's website and fill out an online application form. Alternatively, you can visit your nearest branch and speak with a representative who will guide you through the application process. Make sure to provide accurate information and necessary documents such as proof of income and identity."],
+      "context": [""]
+    },
+    {
+      "tag": "Branch Locator",
+      "patterns": ["How can I find the nearest bank branch?"],
+      "responses": ["You can find the nearest bank branch by using your bank's mobile app or website. Simply enter your location, and the app or website will provide you with a list of nearby branches along with their addresses and contact information."],
+      "context": [""]
+    },
+    {
+      "tag": "Online Banking Registration",
+      "patterns": ["How can I register for online banking?"],
+      "responses": ["To register for online banking, visit your bank's website and look for the 'Register' or 'Sign Up' option. Follow the on-screen instructions to complete the registration process. You will need your account number, ATM/debit card details, and a valid email address to register successfully."],
+      "context": [""]
+    },
+    {
+      "tag": "Lost Card Reporting",
+      "patterns": ["What should I do if I lose my debit/credit card?"],
+      "responses": ["If you lose your debit/credit card, it's important to report it immediately to prevent unauthorized transactions. You can report a lost card by calling your bank's customer service hotline or visiting the nearest branch. Once reported, your card will be blocked, and a replacement card can be issued upon request."],
+      "context": [""]
+    },
+    {
+      "tag": "Account Balance Inquiry",
+      "patterns": ["How can I check my account balance?"],
+      "responses": ["You can check your account balance through various channels such as online banking, mobile banking, ATM, or by visiting the nearest branch. For online and mobile banking, simply log in to your account and navigate to the balance inquiry section. At the ATM, select the balance inquiry option, and for branch visits, approach a bank staff member for assistance."],
+      "context": [""]
+    },
+    {
+      "tag": "Overdraft Facility",
+      "patterns": ["Does the bank offer overdraft facilities?"],
+      "responses": ["Yes, we offer overdraft facilities to eligible customers. An overdraft allows you to withdraw more money than you have in your account, up to a certain limit. Interest is charged on the amount overdrawn. To apply for an overdraft, please visit your nearest branch and speak with a bank representative."],
+      "context": [""]
+    },
+    {
+      "tag": "Foreign Exchange",
+      "patterns": ["How can I exchange foreign currency?"],
+      "responses": ["You can exchange foreign currency at your bank's branches that offer currency exchange services. Visit your nearest branch with your identification and the currency you wish to exchange."],
+      "context": [""]
+    },
+    {
+      "tag": "Fixed Deposit",
+      "patterns": ["What are the benefits of opening a fixed deposit account?"],
+      "responses": ["Opening a fixed deposit account offers several benefits including higher interest rates compared to regular savings accounts, flexible tenures ranging from months to years, and the option to choose interest payout frequencies. Additionally, fixed deposits provide stability and security for your savings."],
+      "context": [""]
+    },
+    {
+      "tag": "Internet Banking Security",
+      "patterns": ["How secure is internet banking?"],
+      "responses": ["Internet banking is secured using advanced encryption technologies to protect your personal and financial information. Additionally, banks implement multi-factor authentication methods and security protocols to prevent unauthorized access and ensure the safety of your online transactions. It's important to follow best practices such as keeping your login credentials confidential and avoiding accessing online banking from public Wi-Fi networks."],
+      "context": [""]
+    },
+    {
+      "tag": "Loan Repayment",
+      "patterns": ["How can I repay my loan?"],
+      "responses": ["You can repay your loan through various methods including online banking, mobile banking, automatic deductions from your bank account, or by visiting the nearest branch and making a payment in person. It's important to ensure timely repayments to avoid penalties and maintain a good credit history."],
+      "context": [""]
+    },
+    {
+      "tag": "Account Closure",
+      "patterns": ["How do I close my bank account?"],
+      "responses": ["To close your bank account, visit your nearest branch and fill out an account closure request form. You will need to clear any outstanding balances and return any unused cheques, debit cards, or passbooks associated with the account. Once the necessary formalities are completed, your account will be closed, and any remaining balance will be provided to you."],
+      "context": [""]
+    }
+  ]
+}

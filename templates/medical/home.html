@@ -1,0 +1,239 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {%endblock title %} |home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <style>
+    .xyz{
+      margin-bottom: 0px;
+      background-size: cover;
+      background-image: url('{% static "image/homepage.jpg" %}');
+
+      background-repeat: no-repeat;
+    }
+    .chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      border-radius: 100%;
+      border: 5px solid black;
+  }
+  .chatbox {
+      display: none;
+      position: fixed;
+      bottom: 120px;
+      right: 60px;
+      width: 200px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .chatbox-header {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      text-align: center;
+  }
+  .chatbox-body {
+      padding: 5px;
+      overflow-y: auto;
+      border-radius: 10px;
+  }
+  .chatbox-footer {
+      padding: 10px;
+  }
+  .message {
+      margin: 10px 0;
+
+  }
+  
+    .custom-scrollbar-js,
+    .custom-scrollbar-css {
+  height: 100px;
+}
+
+
+/* Custom Scrollbar using CSS */
+.custom-scrollbar-css {
+  overflow-y: scroll;
+}
+
+/* scrollbar width */
+.custom-scrollbar-css::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* scrollbar track */
+.custom-scrollbar-css::-webkit-scrollbar-track {
+  background: rgb(240, 234, 239);
+}
+
+/* scrollbar handle */
+.custom-scrollbar-css::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #eaecec;
+  background-image: linear-gradient(to top, #f6fbfc 0%, #e9edf1 100%);
+}
+
+body {
+  min-height: 100vh;
+  background-color: #00d2ff;
+  background-image: linear-gradient(to right, #e7eaeb 0%, #f4f5f7 100%);
+}
+
+  .bs-example {
+    margin: 0px;
+
+  }
+  .bg-dark {
+  background-color: #212529!important;
+}
+  .navbar-brand {
+    font-size: 20px;
+    font-family: monospace;
+    
+  }
+  /* Footer for the page */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(23, 23, 80);
+    color: white;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+</style>
+<body style = "background-image:url('https://media.licdn.com/dms/image/D4E12AQH6TCRT3oVbDQ/article-cover_image-shrink_720_1280/0/1660801744090?e=2147483647&v=beta&t=mT31u_j057KUMDRCfVHHiNXWYoL-vykeEbMDiY_6ufs')">
+  <div class="bs-example">
+  <nav class="navbar navbar-expand-md  navbar-light fixed-top" style="background-color:rgb(23, 23, 80);">
+  <a style="color: #ffffff;text-decoration: none;" href="/homepage"><img src="https://www.amritahospitals.org/_next/image?url=https%3A%2F%2Fadmin.amritahospitals.org%2Fsites%2Fdefault%2Ffiles%2F2024-08%2Fimage%2520%25284%2529.png&w=3840&q=100" width=250 height=100 style="margin-left:10px;border-radius:30px;"><font size ="15"></font><br /></a>  
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+      <div class="navbar-nav">
+        <p style="padding-left: 15px;"  class="nav-item nav-link active"></p>
+
+      </div>
+      <div class="navbar-nav">
+        <a class="navbar-brand" href="\homepage" style="color: #f1f1f1;font-size: 25px;">Welcome !! {{user.username}} !!</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="\homepage" style="color: #f1f1f1;font-size: 25px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/classification1" class="nav-item nav-link" style="color: #f1f1f1;font-size: 25px;">Skin Cancer</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="/customer/eng" style="color: #f1f1f1;font-size: 25px;">Chatbot</a>
+          </li>
+         
+              
+             
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/customer/eng" style="color: #f1f1f1;font-size: 25px;">Bank Chatbot</a>
+          </li>
+                  
+              
+              
+          {% endif %}  
+          <li class="nav-item">
+            <a class="nav-link" href="\logout" style="color: #f1f1f1;font-size: 25px;">Logout</a>
+          </li>
+        </ul>
+        
+        
+      </div>
+    </div>
+  </nav>
+</div>
+
+<br>
+
+  <div class="container text-center">
+    <br><br><br><br><br>
+    {% comment %} <h6 class="display-3 text-white" style="font-family: Times New Roman;color: rgb(72, 54, 163);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Bank Chatbot System</h6> {% endcomment %}
+
+  </div>  
+  <br> <br>
+  <br><br>
+  <div class="container text-center" style="background-color: white;">
+    <!--Cards-->
+
+  <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center ">
+    <div class="container text-center">
+      <br><br>
+      <h2 class="display-3 text-danger">Skin Cancer Detection System</h2>
+  
+      <p class="display-4 d-none d-sm-block"></p>
+      
+      <p class="lead">Welcome to Skin Cancer Detection System !!</p>
+  
+    
+      
+      <a href="/customer/eng" class="btn btn-lg btn-danger" style="border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i>Continue</a>
+      
+      <br>
+      
+      <br><br>
+  
+    </div>  
+  </section>
+    </div>
+
+    <!-- Change the src attribute to the path of your chatbot icon image -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBxsmKH86PvxbH474TK34QvEg5rJ79ekZBzW1BTXMX-BXrHXhs615AKbNe9syvlGS0jo&usqp=CAU" class="chatbot-icon" onclick="toggleChatbox()">
+
+<div class="chatbox" id="chatbox">
+    
+    <div class="chatbox-body">
+       <a href="/customer/eng"> <div class="message">Hi, how can I help?</div> </a>
+    </div>
+    
+</div>
+    
+ 
+<script>
+  function toggleChatbox() {
+      var chatbox = document.getElementById('chatbox');
+      if (chatbox.style.display === 'none' || chatbox.style.display === '') {
+          chatbox.style.display = 'block';
+      } else {
+          chatbox.style.display = 'none';
+      }
+  }
+
+  // Automatically show the chatbox when the page loads
+  window.onload = function() {
+      document.getElementById('chatbox').style.display = 'block';
+  }
+</script>
+
+<br><br>
+<br><br>
+<br><br>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2024 Skin Cancer Detection. All Rights Reserved.</p>
+</footer>
+
+   
+</body>
+</html>

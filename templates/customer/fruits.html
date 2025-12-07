@@ -1,0 +1,166 @@
+{% block content %}
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        /* Full-screen background with a gradient */
+        body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header Styles */
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Image Section */
+        .image-section {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-section img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Results Section */
+        .result-label {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #28a745;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Button Styles */
+        .btn-custom {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 40px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-section img {
+                width: 150px;
+                height: 150px;
+            }
+            
+        }
+
+        /* Footer for the page */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(23, 23, 80);
+    color: white;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+    </style>
+</head>
+
+<body style="background-image:url('https://media.allure.com/photos/6021770fa1423708458f756a/16:9/w_2560%2Cc_limit/woman%2520with%2520facial%2520rash.jpg')">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: rgb(23, 23, 80);color: azure;">
+    <div class="container-fluid">
+      <a style="color: #ffffff;text-decoration: none;" href="/homepage"><img src="https://www.amritahospitals.org/_next/image?url=https%3A%2F%2Fadmin.amritahospitals.org%2Fsites%2Fdefault%2Ffiles%2F2024-08%2Fimage%2520%25284%2529.png&w=3840&q=100"
+         width=250 height=100 style="margin-left:10px;border-radius:30px;"><font size ="15"></font><br /></a>  
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" >
+            <a class="nav-link" href="\homepage" style="color: #f1f1f1;font-size: 25px;"><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="\logout" style="color: #f1f1f1;font-size: 25px;">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation Bar -->
+  <br><br>
+  <br><br><br><br>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Skin Disease Detection</h2>
+
+        <!-- Image Preview Section -->
+        {% if file_url %}
+            <div class="image-section">
+                <img src="{{ file_url }}" alt="Uploaded Image">
+                <img src="media/grey.jpeg" alt="Grey Image">
+                <img src="media/binary.jpeg" alt="Binary Image">
+            </div>
+        {% else %}
+            <p class="result-label" style="color: red;">No Image Selected</p>
+        {% endif %}
+
+        <!-- Results Section -->
+        <div class="result-label">
+            Detected Result:
+            <span class="result-value" style="color:red;font-size:80;">{{ predictions1 }}</span>
+            <span class="result-value">{{ ans1 }}</span>
+        </div>
+
+        <!-- Return Button -->
+        {% comment %} <a class="btn-custom" href="/">Return to Homepage</a> {% endcomment %}
+    </div>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2024 Skin Disease Detection. All Rights Reserved.</p>
+</footer>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+{% endblock %}

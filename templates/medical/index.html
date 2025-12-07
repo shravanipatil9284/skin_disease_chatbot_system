@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+        .xyz{
+          margin-bottom: 0px;
+          background-image: url('{% static "image/homepage.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .chatbot-icon {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 100px;
+          height: 100px;
+          cursor: pointer;
+          border-radius: 100%;
+          border: 5px solid black;
+      }
+      .chatbox {
+          display: none;
+          position: fixed;
+          bottom: 120px;
+          right: 60px;
+          width: 200px;
+          background-color: white;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      .chatbox-header {
+          padding: 10px;
+          background-color: #007bff;
+          color: white;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          text-align: center;
+      }
+      .chatbox-body {
+          padding: 5px;
+          overflow-y: auto;
+          border-radius: 10px;
+      }
+      .chatbox-footer {
+          padding: 10px;
+      }
+      .message {
+          margin: 10px 0;
+
+      }
+      /* Footer for the page */
+      .footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: rgb(23, 23, 80);
+        color: white;
+        margin-top: 2rem;
+        font-size: 1rem;
+      }
+      
+</style>
+{% include "medical/navbar.html" %}
+
+<body style = "background-image:url('https://www.skincancer.org/wp-content/uploads/GettyImages-1413600685.jpg')">
+  <br>
+
+  <div class="container text-center">
+    <br><br><br><br><br>
+    {% comment %} <h6 class="display-3 text-white" style="font-family: Times New Roman;color: rgb(72, 54, 163);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">DY patil School of Engineering and Technology, Ambi, Pune</h6> {% endcomment %}
+
+  </div>  
+  <br> <br>
+  <br><br>
+  <div class="container text-center" style="background-color: aliceblue;">
+    <!--Cards-->
+
+    <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center " style="background-color:white">
+      <div class="container text-center">
+        <br><br>
+        <h2 class="display-3 text-danger">Skin Cancer Detection System</h2>
+    
+        <p class="display-4 d-none d-sm-block"></p>
+        
+        <p class="lead">Sign Up now to start applying for your first policy...</p>
+    
+      
+        
+        <a href="/customer/register_user" class="btn btn-lg btn-danger" style="border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i>Sign UP</a>
+        
+        <br>
+        
+        <br><br>
+    
+      </div>  
+    </section>
+    </div>
+
+    <!-- Change the src attribute to the path of your chatbot icon image -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBxsmKH86PvxbH474TK34QvEg5rJ79ekZBzW1BTXMX-BXrHXhs615AKbNe9syvlGS0jo&usqp=CAU" class="chatbot-icon" onclick="toggleChatbox()">
+
+<div class="chatbox" id="chatbox">
+    
+    <div class="chatbox-body">
+       <a href="/customer/loginuser"> <div class="message">Hi, how can I help?</div> </a>
+    </div>
+    
+</div>
+    
+   
+<script>
+  function toggleChatbox() {
+      var chatbox = document.getElementById('chatbox');
+      if (chatbox.style.display === 'none' || chatbox.style.display === '') {
+          chatbox.style.display = 'block';
+      } else {
+          chatbox.style.display = 'none';
+      }
+  }
+
+  // Automatically show the chatbox when the page loads
+  window.onload = function() {
+      document.getElementById('chatbox').style.display = 'block';
+  }
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2024 Skin cancer Detection. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>

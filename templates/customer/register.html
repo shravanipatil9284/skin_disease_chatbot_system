@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 50px; 
+          
+        }
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: black;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Add padding to containers */
+        .container {
+          padding: 16px;
+          background-color: white;
+          
+        }
+        
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+          width: 50%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus, input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        /* Overwrite default styles of hr */
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+        
+        /* Set a style for the submit button */
+        .button {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 20%;
+          opacity: 0.9;
+        }
+        
+        .button:hover {
+          opacity: 1;
+        }
+        
+        /* Add a blue text color to links */
+        a {
+          color: dodgerblue;
+        }
+        
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+          background-color: #f1f1f1;
+          text-align: center;
+        }
+        /* Footer for the page */
+        .footer {
+          text-align: center;
+          padding: 2rem;
+          background-color: rgb(23, 23, 80);
+          color: white;
+          margin-top: 2rem;
+          font-size: 1rem;
+        }
+    </style>
+  </head>
+  <body background="https://images.squarespace-cdn.com/content/v1/5f972a7c930e1b7910954135/a1b817fd-99ad-4608-9f5b-4ad26d74739b/Publishing_Publisher-Header.jpg?format=2500w">
+    {% include "medical/navbar.html" %}
+ 
+
+
+<br><br><br><br><br>
+<!--Register--> 
+<div class="container py-3" style='background: rgba(76, 175, 80, 0.3);'>
+	<center><h1 style="color:red;">Register User</h1></center>
+				
+		
+
+<form action="/click_user" method="post">
+		{% csrf_token %}
+		
+
+	
+<center><div style="background-color:white;box-shadow: 10px 20px 20px black;">
+<div><br>
+		<label ><b>Username: </b></label>
+		<input type="text" name="username" placeholder="Enter Username" required>
+	  </div>
+	  <div>
+
+		<label ><b>User Email: <b></label> 
+		<input type="text" name="email" placeholder="Enter Email" required>
+	  </div>
+	  <div>
+
+		<label ><b>Password: </b></label>
+		<input type="password" name="password" placeholder="Enter Password" required></div>
+
+		 <input type="submit" class="button" value="Register"><br>
+
+				 
+
+
+<div><br>
+				{% if messages %}
+				{% for message in messages %}
+				{% if message.tags == 'success' %}
+				 {{ message }}
+
+				{% elif message.tags == 'error' %}
+				{{ message }}
+
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+
+
+
+	</div></center>
+		</form>
+
+</div>
+<br>
+<br>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2024 Skin Disease Detection. All Rights Reserved.</p>
+</footer>
+  </body>
+</html>

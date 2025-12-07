@@ -1,0 +1,134 @@
+{
+  "intents":[
+  {
+  "tag": "greeting",
+  "patterns": [
+  "Hi",
+  "Hello",
+  "Hey",
+  "Good morning",
+  "Good afternoon",
+  "Good evening"
+  ],
+  "responses": [
+  "Hello! How can I assist you today?",
+  "Hi there! How can I help you?",
+  "Hello, how can I assist you today?",
+  "Hey! What can I do for you?",
+  "Good [morning/afternoon/evening]! How can I help you?"
+  ],
+  "context": [""]
+  },
+  {
+  "tag": "goodbye",
+  "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+  "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+  "context": [""]
+  },
+  {
+    "tag": "thanks",
+    "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+    "responses": ["Happy to help!", "Any time!", "My pleasure"],
+    "context": [""]
+  },
+
+
+  {
+    "tag": "noanswer",
+    "patterns": [],
+    "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+    "context": [""]
+  },
+  {
+    "tag": "initial",
+    "patterns": ["I am not feeling well", "I am not okay.", "I am feeling weak", "I feel sick"],
+    "responses": ["Ohho Don't worry. I'll help you.", "Be relaxed. Tell me what symptoms you're experiencing.", "Here I am to assist you."],
+    "context": [""]
+  },
+  {
+    "tag": "Chicken_Pox",
+    "patterns": [
+      "I have a fever, loss of appetite, headache, tiredness, and a general feeling of being unwell.",
+      "I have rash spots on my skin, blisters, and I feel weak.",
+      "I feel itchy, I have a fever, and I am feeling exhausted."
+    ],
+    "responses": [
+      "It seems like you are having Chicken Pox. You may take medications like acyclovir (Zovirax, Sitavig), or immune globulin intravenous (Privigen).Rest and hydration are important. You can try soothing lotions for the rash and consider antiviral medications.You can meet a doctor for further treatment or diagnosis."
+    ],
+    "context": [""]
+  },
+  {
+    "tag": "Shingles",
+    "patterns": [
+      "I have a painful rash, burning or tingling sensations, and blisters on my body.",
+      "I feel a sharp, burning pain along one side of my body, and I have red spots that are turning into blisters.",
+      "I am experiencing intense pain and blisters in a strip-like pattern across my body."
+    ],
+    "responses": [
+      "It seems like you might have Shingles. You may need antiviral drugs like acyclovir, famciclovir, or valacyclovir to reduce the symptoms.Pain relief medications such as ibuprofen or acetaminophen can help with the pain. Consult with a doctor for more options.You can consult a doctor for specific antiviral treatment and pain management."
+    ],
+    "context": [""]
+  },
+  {
+    "tag": "Herpes_Simplex",
+    "patterns": [
+      "I have painful blisters on my lips or genitals.",
+      "I feel burning sensations and have blisters around my mouth or genitals.",
+      "I have itchy sores, red bumps, and blisters that break open and ooze fluid."
+    ],
+    "responses": [
+      "It seems like you have Herpes Simplex virus (HSV). You may be prescribed antiviral drugs like acyclovir, valacyclovir, or famciclovir.To manage the pain, you can use ointments or topical creams. Avoid touching the sores to prevent spreading.You should consult with a doctor for proper diagnosis and treatment options."
+    ],
+    "context": [""]
+  },
+  {
+    "tag": "Measles",
+    "patterns": [
+      "I have a high fever, cough, runny nose, sore throat, and a rash.",
+      "I feel very weak, I have red spots inside my mouth, and now a rash is spreading on my face.",
+      "I have a rash that started on my face and now it's spreading to my body."
+    ],
+    "responses": [
+      "It seems like you might have Measles. This is a viral infection, and you may be prescribed vitamin A, pain relievers, and fluids.Rest and hydration are important. Make sure to isolate yourself to prevent spreading the virus.You should see a doctor for a proper diagnosis and further treatment options."
+    ],
+    "context": [""]
+  },
+  {
+    "tag": "Hand_Foot_and_Mouth_Disease",
+    "patterns": [
+      "I have a fever, sore throat, and red spots on my hands, feet, and mouth.",
+      "I feel tired, have small sores on my mouth, and rashes on my hands and feet.",
+      "I have a rash with small red spots that turned into blisters, mostly on my hands and feet."
+    ],
+    "responses": [
+      "It seems like you have Hand, Foot, and Mouth Disease. You may need fluids to stay hydrated and pain relief for fever and discomfort.This condition is usually mild, but if symptoms worsen or if you experience difficulty swallowing, see a doctor immediately. Most cases resolve on their own, but if needed, a doctor can help with managing symptoms."
+    ],
+    "context": [""]
+  },
+  {
+    "tag": "viral_skin_rash",
+    "patterns": [
+      "I have a red rash that seems to be spreading on my skin.",
+      "I feel itchy and I have raised red patches on my skin.",
+      "My skin is irritated and covered with red bumps and blisters."
+    ],
+    "responses": [
+      "It seems like you may have a viral skin rash. Depending on the type, treatments may vary. You can take antihistamines for itching and consult a doctor.Viral rashes like measles, chickenpox, or herpes can cause skin irritation and blisters. You may need antiviral medication or symptom relief, Please meet a healthcare provider for a proper diagnosis, as the treatment depends on the specific virus causing the rash."
+    ],
+    "context": [""]
+  },
+  {
+    "tag": "options",
+    "patterns": [
+      "How can you help me?",
+      "What services do you offer?",
+      "What kind of help can I get from you?",
+      "What support do you provide?"
+    ],
+    "responses": [
+      "I can guide you through information on common health conditions like viral skin diseases, suggest medications, and help find nearby doctors or hospitals.I can help with symptoms, drug advice, and direct you to medical services if needed.Feel free to ask about health conditions, medications, and the next steps for treatment."
+    ],
+    "context": [""]
+  }
+]
+}
